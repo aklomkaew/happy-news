@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "react-art": "^16.13.1",
+    "react-native": "^0.62.0",
+    "react-native-web": "^0.12.2"
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.62.0"
+  }
+}
