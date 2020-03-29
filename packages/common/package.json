@@ -1,0 +1,19 @@
+{
+  "name": "@wow/common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react-native": "^0.62.0"
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.62.0",
+    "typescript": "^3.8.3"
+  }
+}

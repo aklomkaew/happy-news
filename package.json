@@ -6,5 +6,27 @@
   },
   "devDependencies": {
     "@types/react-native": "^0.62.0"
-  }
+  },
+  "private": true,
+  "name": "happy-news",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aklomkaew/happy-news.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "bugs": {
+    "url": "https://github.com/aklomkaew/happy-news/issues"
+  },
+  "homepage": "https://github.com/aklomkaew/happy-news#readme"
 }
