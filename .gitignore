@@ -184,6 +184,7 @@ local.properties
 /android/
 
 # Node
+*/node_modules/*
 node_modules
 *.log
 .nvm
@@ -252,6 +253,8 @@ RNTester/Pods/*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+yarn.lock
+
 
 node_modules/**/*
 .expo/*
