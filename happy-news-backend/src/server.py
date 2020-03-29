@@ -31,11 +31,14 @@ def getScores():
         articles = []
         print("article size = " + str(len(scraped_articles)))
         for a in scraped_articles:
+            # a.download()
+            # a.parse()
+            # print("hello " + a.html)
             # make sure a.text is in valid format
-            score_data = json.loads(comprehend.detect_sentiment(Text=a.text, LanguageCode='en'))
-            text = "It is raining today in Seattle"
-            print("score = ")
-            print(score_data)
+            # text = "It is raining today in Seattle"
+            # score_data = json.loads(comprehend.detect_sentiment(Text=text, LanguageCode='en'))
+            # print("score = ")
+            # print(str(score_data))
             # print("sentiment = " + score_data['Sentiment'])
             # print(json.dumps(comprehend.detect_sentiment(Text=text, LanguageCode='en'), sort_keys=True, indent=4))
             articles.append({

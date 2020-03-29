@@ -9,8 +9,6 @@ print('Calling DetectSentiment')
 print(json.dumps(comprehend.detect_sentiment(Text=text, LanguageCode='en'), sort_keys=True, indent=4))
 print('End of DetectSentiment\n')
 
-
-
 # aws comprehend detect-sentiment \
 #     --region "us-west-2" \
 #     --language-code "en" \

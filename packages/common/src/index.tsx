@@ -11,7 +11,7 @@ const http = axios.create({
 
 export const App: React.FC = () => {
   console.log("boutta up")
-  var body = {"news_provider":"bbc"};
+  var body = {"news_provider":"cnn"};
   http.post('/scores', body).then(function(result) {
     console.log("yom ywaddup %o", result)
   });
