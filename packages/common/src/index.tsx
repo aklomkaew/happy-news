@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {useState} from 'react';
-import { StyleSheet,Text, View, TextInput} from 'react-native';
+
+
 // import axios from 'axios';
 
 // // public IP address for your computer
@@ -9,34 +9,43 @@ import { StyleSheet,Text, View, TextInput} from 'react-native';
 //   baseURL: serverUrl,
 // });
 
-export const App: React.FC = () => {
-  const [source, setSource] = useState('BBC');
-  return (
-    <View style={styles.container}>
-      <Text>Search news source:</Text>
-      <TextInput 
-      style={styles.input}
-      placeholder='e.g. BBC, CNN, VOA'
-      onChangeText={()=>setSource()}
-      />
-      <Text>Source : {source}</Text>
-    </View>
-  );
-}
-
-const styles= StyleSheet.create({
-  container:{
-    flex : 1,
-    backgroundColor: 'grey',
-    alignItems:'center',
-    justifyContent:'center',
-  },
-  input:{
-    borderWidth : 1,
-    borderColor: '#777',
-    padding: 8,
-    backgroundColor: 'white',
-    margin:10,
-    width: 20,
+export class App extends React.Component<{}, IState>{
+  constructor(props: {}){
+    super(props);
+    this.state={
+      currentSearch:"",
+      Search: []
+    }
   }
-})
+  handleSubmit(e: any){
+    e.preventDefault();
+    this.setState({
+      currentSearch:"",
+      Search: [
+        ...this.state.Search,
+        this.state.currentSearch
+      ]
+    })
+  }
+  render(){
+    console.log(this.state);
+    return (
+    <div>
+      <h1> News source </h1>
+        <form onSubmit={(e) => this.handleSubmit(e)}>
+          <input 
+            type="text" 
+            placeholder="e.g. BBC, CNN, VOA"
+            value={this.state.currentSearch}
+            onChange={e => this.setState({currentSearch: e.target.value})}
+          />
+          <button type="submit">Search</button>
+        </form>
+    </div>
+    );
+  }
+}
+interface IState{
+  currentSearch: string;
+  Search:Array<string>;
+}

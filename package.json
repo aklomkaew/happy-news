@@ -2,7 +2,9 @@
   "dependencies": {
     "react-art": "^16.13.1",
     "react-native": "^0.62.0",
-    "react-native-web": "^0.12.2"
+    "react-native-web": "^0.12.2",
+    "wml": "0.0.83",
+    "yarn": "^1.22.4"
   },
   "devDependencies": {
     "@types/react-native": "^0.62.0"
