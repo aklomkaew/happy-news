@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { View } from 'react-native';
 
 
 // import axios from 'axios';
@@ -30,8 +31,11 @@ export class App extends React.Component<{}, IState>{
   render(){
     console.log(this.state);
     return (
-    <div>
+    <View style= {{alignItems: "center"}}>
+    <div style ={{backgroundColor : 'grey', flex:1, height : "100vh", width : "100vh"}}>
+    <View style= {{alignItems: "center"}}>
       <h1> News source </h1>
+    
         <form onSubmit={(e) => this.handleSubmit(e)}>
           <input 
             type="text" 
@@ -39,9 +43,12 @@ export class App extends React.Component<{}, IState>{
             value={this.state.currentSearch}
             onChange={e => this.setState({currentSearch: e.target.value})}
           />
-          <button type="submit">Search</button>
+          <button type="submit"> Search </button>
         </form>
+      </View>
     </div>
+    </View>
+    
     );
   }
 }
