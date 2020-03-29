@@ -15,6 +15,6 @@ const styles = StyleSheet.create({
     },
     titleText: {
         fontFamily: 'dincondensed',
-        fontSize: 30,
+        fontSize: 48,
     }
 });
