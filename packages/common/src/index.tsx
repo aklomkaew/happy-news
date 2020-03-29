@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
+import * as React, { useState } from 'react';
+import { StyleSheet, Text, View, Flatlist } from 'react-native';
 // import axios from 'axios';
 
 // // public IP address for your computer
@@ -9,9 +9,29 @@ import { Text, View } from 'react-native';
 // });
 
 export const App: React.FC = () => {
+  const [article, setArticle] = useState([
+    {article : 'best way'},
+    {article : 'good night'},
+    {article : 'covid-is-all-around'},
+  ]);
+
   return (
-    <View>
-      <Text>hello from react native web</Text>
+    <View style={styles.container}>
+      <Flatlist
+        data={article}
+        renderItem={({item})=>(
+          <Text style={styles.item}>Article : {item.article}</Text>
+        )}
+      />
+      
     </View>
   );
 }
+const styles = StyleSheet.create({
+  container{
+    flex : 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+})
