@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 // import axios from 'axios';
 
 // // public IP address for your computer
@@ -11,7 +11,7 @@ import { Text, View } from 'react-native';
 export const App: React.FC = () => {
   return (
     <View>
-      <Text>hello from react native web</Text>
+      <Text>HAPPYNEWS</Text>
     </View>
   );
 }
