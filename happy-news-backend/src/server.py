@@ -5,7 +5,7 @@ from newspaper import Article
 import boto3
 import json
 
-comprehend = boto3.client(service_name='comprehend', region_name='us-west-2')
+comprehend = boto3.client(service_name='comprehend', region_name='us-east-1')
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
