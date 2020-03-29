@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import {useState} from 'react';
+import { StyleSheet,Text, View, TextInput} from 'react-native';
 // import axios from 'axios';
 
 // // public IP address for your computer
@@ -9,9 +10,33 @@ import { Text, View } from 'react-native';
 // });
 
 export const App: React.FC = () => {
+  const [source, setSource] = useState('BBC');
   return (
-    <View>
-      <Text>hello from react native web</Text>
+    <View style={styles.container}>
+      <Text>Search news source:</Text>
+      <TextInput 
+      style={styles.input}
+      placeholder='e.g. BBC, CNN, VOA'
+      onChangeText={()=>setSource()}
+      />
+      <Text>Source : {source}</Text>
     </View>
   );
 }
+
+const styles= StyleSheet.create({
+  container:{
+    flex : 1,
+    backgroundColor: 'grey',
+    alignItems:'center',
+    justifyContent:'center',
+  },
+  input:{
+    borderWidth : 1,
+    borderColor: '#777',
+    padding: 8,
+    backgroundColor: 'white',
+    margin:10,
+    width: 20,
+  }
+})
