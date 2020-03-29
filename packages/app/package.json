@@ -17,8 +17,17 @@
     "react-native-web": "~0.11.7"
   },
   "devDependencies": {
+    "@wow/common": "1.0.0",
     "babel-preset-expo": "~8.0.0",
     "@babel/core": "^7.0.0"
   },
-  "private": true
+  "private": true,
+  "workspaces": {
+    "nohoist": [
+      "react-native", 
+      "react-native/**",
+      "react",
+      "react/**"
+    ]
+  }
 }
