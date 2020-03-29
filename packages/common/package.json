@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react-native": "^0.62.0"
+    "react-bootstrap": "^1.0.0",
+    "react-native": "^0.62.0",
+    "reactxp": "^2.0.0"
   },
   "devDependencies": {
     "@types/react-native": "^0.62.0",

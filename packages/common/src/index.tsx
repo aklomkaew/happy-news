@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
-import { Text, View, Button, StyleSheet } from 'react-native';
+import { Text, View } from 'react-native';
 import axios from 'axios';
 
 // public IP address for your computer
@@ -10,7 +9,6 @@ const http = axios.create({
   withCredentials: true,
 });
 
-
 export const App: React.FC = () => {
   console.log("boutta up")
   var body = {"news_provider":"bbc"};
@@ -19,10 +17,7 @@ export const App: React.FC = () => {
   });
   return (
     <View>
-      <Text>hello from react native web</Text>
-      {/* <Text>{text}</Text> */}
-      {/* <Button title="search" onPress={() => 
-        goSearch(XML.toString(http.post('/scores', "cnn"))}/> */}
+      <Text>hello from react native web blah</Text>
     </View>
   );
 }
